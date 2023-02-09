@@ -1,0 +1,270 @@
+/* 
+
+************************************
+Import fonts
+************************************
+
+*/
+
+
+@font-face {
+    font-family: "Elgoc";
+    src: url("fonts/ElgocAlt-Medium.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "Beatrice";
+    src: url("fonts/Beatrice-Medium.woff2") format("truetype");
+}
+
+
+
+/* 
+
+************************************
+declaration as root
+************************************
+
+*/
+
+
+:root {
+    --background-clr: #0b0b0d;
+
+    --f-clr: #cec9c9;
+
+    --primary-ff: 'Elgoc', serif;
+    --sec-ff: "Beatrice" , sans-serif;
+}
+
+
+
+/* 
+
+************************************
+all
+************************************
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+
+    /* outline: 1px solid rebeccapurple; */
+}
+
+
+
+/* 
+
+************************************
+body
+************************************
+
+*/
+
+
+
+body {
+    background: var(--background-clr);
+    /* background */
+}
+
+
+
+/* 
+
+************************************
+header/navbar
+************************************
+
+*/
+
+
+.header-nav {
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    backdrop-filter: blur(5px);
+}
+
+.header-nav-menu {
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-nav-p {
+    font-family: var(--sec-ff);
+    color: var(--f-clr);
+    width: fit-content;
+    line-height: 1rem;
+}
+
+.header-nav-p-right {
+    text-align: right;
+}
+
+
+
+/* 
+
+************************************
+go up btn
+************************************
+
+*/
+
+
+.go-up-btn {
+    position: fixed;
+    z-index: 999;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0px solid;
+    border-radius: 20px;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--f-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+}
+
+.go-up-btn-active {
+    display: flex;
+    opacity: 1;
+}
+
+
+
+/* 
+
+************************************
+sec one
+************************************
+
+*/
+
+
+.sec-one {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.sec-one-intoduction {
+    width: 15rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    
+}
+
+.sec-one-hero-h1 {
+    font-family: var(--primary-ff);
+    font-size: 4rem;
+    width: fit-content;
+    transition: all ease-out 100ms;
+    font-weight: 100;
+    color: var(--f-clr);
+}
+
+
+
+/* 
+
+************************************
+sec two
+************************************
+
+*/
+
+
+.sec-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sec-two-intoduction {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.sec-two-intoduction-h1 {
+    font-family: var(--primary-ff);
+    color: var(--f-clr);
+    font-size: 4rem;
+}
+
+.sec-two-intoduction-p {
+    color: var(--f-clr);
+    font-family: var(--sec-ff);
+}
+
+
+
+/* 
+
+************************************
+sec two
+************************************
+
+*/
+
+
+.sec-three {
+    height: 200vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec-three-explanation {
+    width: 18rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+}
+
+.sec-three-explanaation-h1 {
+    font-family: var(--primary-ff);
+    color: var(--f-clr);
+    font-size: 3.5rem;
+    text-align: center;
+    letter-spacing: 2px;
+    line-height: 5rem;
+}
+
+.sec-three-explanaation-p {
+    font-family: var(--sec-ff);
+    color: var(--f-clr);
+    font-size: 1rem;
+}
+
+
+
+
+.okok {
+    height: 100vh;
+}
