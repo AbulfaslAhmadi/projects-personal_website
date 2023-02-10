@@ -54,7 +54,7 @@ all
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-    /* outline: 1px solid rebeccapurple; */
+    outline: 1px solid rebeccapurple;
 }
 
 
@@ -93,6 +93,9 @@ header/navbar
     display: flex;
     justify-content: center;
     align-items: center;
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
 }
 
@@ -227,44 +230,75 @@ sec two
 /* 
 
 ************************************
-sec two
+sec three
 ************************************
 
 */
 
 
 .sec-three {
-    height: 200vh;
+    height: 150vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .sec-three-explanation {
     width: 18rem;
     display: flex;
     flex-direction: column;
-    gap: 10rem;
+    gap: 3rem;
 }
 
-.sec-three-explanaation-h1 {
+.sec-three-explanation-div {
+    position: relative;
+}
+
+.sec-three-explanation-comment {
+    background: linear-gradient(180deg, rgb(30, 107, 189) 0%, rgb(122, 152, 184) 500%);
+    display: inline-block;
+    white-space: nowrap;
+    padding: 1rem 2rem;
+    font-family: var(--sec-ff);
+    font-size: 0.8rem;
+    color: var(--f-clr);
+    border-radius: 40px;
+
+    position: absolute;
+    z-index: 999;
+}
+
+.sec-three-comment-one {
+    top: 2.5rem;
+}
+
+.sec-three-comment-two {
+    bottom: -3rem;
+}
+
+.sec-three-explanation-h1 {
     font-family: var(--primary-ff);
     color: var(--f-clr);
     font-size: 3.5rem;
     text-align: center;
-    letter-spacing: 2px;
     line-height: 5rem;
-}
+}   
 
-.sec-three-explanaation-p {
+.sec-three-explanation-p {
     font-family: var(--sec-ff);
     color: var(--f-clr);
     font-size: 1rem;
 }
 
+@media screen and (min-height: 700px) {
+    .sec-three {
+        max-height: 100vh;
+    }
+}
 
 
 
 .okok {
-    height: 100vh;
+    max-height: 100vh;
 }
