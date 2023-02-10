@@ -53,6 +53,8 @@ all
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    /* outline: 1px solid rebeccapurple; */
 }
 
 
@@ -297,6 +299,52 @@ sec three
 
 
 
-.okok {
+/* 
+
+************************************
+sec three
+************************************
+
+*/
+
+
+.footer {
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.footer-nav {
+    width: 20rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.footer-nav-h1 {
+    font-family: var(--sec-ff);
+    font-size: 1rem;
+    color: var(--f-clr);
+}
+
+.footer-nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-nav-menu-links {
+    text-decoration: none;
+    font-family: var(--primary-ff);
+    font-size: 4rem;
+    color: var(--f-clr);
+}
+
+.footer-nav-menu-links::after {
+    content: url(images/external-link.svg);
 }
