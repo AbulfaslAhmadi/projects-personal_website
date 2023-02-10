@@ -7,12 +7,22 @@ document.addEventListener("scroll", () => {
 
     const SecOneLeft = document.querySelectorAll(".sec-one-left");
     const SecOneRight = document.querySelectorAll(".sec-one-right");
-
+    
     for(i=0; i<SecOneRight.length; i++) {
-       if(scroll < 500) {
-        SecOneRight[i].style.transform = `translate(${titleScroll}px)`;
-        SecOneLeft[i].style.transform = `translate(${-titleScroll}px)`;
-       }
+        if(scroll < 500) {
+            SecOneRight[i].style.transform = `translate(${titleScroll}px)`;
+            SecOneLeft[i].style.transform = `translate(${-titleScroll}px)`;
+        }
+    }
+
+
+    const SecOneAll = document.querySelectorAll(".sec-one-hero-h1");
+
+    for(i=0; i < SecOneAll.length; i++) {
+
+        if(scroll < 500) {
+            SecOneAll[i].style.opacity = 1 - (scroll/400);
+        }
     }
 
 
