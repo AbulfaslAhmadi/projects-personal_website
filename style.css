@@ -71,7 +71,6 @@ body
 
 body {
     background: var(--background-clr);
-    /* background */
 }
 
 
@@ -172,21 +171,22 @@ sec one
 
 
 .sec-one-intoduction {
-    width: 15rem;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
-    
+    position: relative;
 }
 
 .sec-one-hero-h1 {
     font-family: var(--primary-ff);
-    font-size: 4rem;
+    font-size: 5rem;
     width: fit-content;
-    transition: all ease-out 100ms;
+    transition: all ease-out 300ms;
     font-weight: 100;
     color: var(--f-clr);
+    font-weight: 600;
 }
 
 
@@ -335,7 +335,7 @@ sec three
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .footer-nav-menu-links {
