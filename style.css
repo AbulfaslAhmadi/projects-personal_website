@@ -53,6 +53,8 @@ all
     margin: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
+
+    outline: 1px solid rebeccapurple;
 }
 
 
@@ -202,7 +204,7 @@ sec two
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    height: 70vh;
 }
 
 .sec-two-intoduction {
@@ -246,7 +248,7 @@ sec three
     width: 18rem;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 8rem;
 }
 
 .sec-three-explanation-div {
@@ -268,11 +270,11 @@ sec three
 }
 
 .sec-three-comment-one {
-    top: 2.5rem;
+    top: 3rem;
 }
 
 .sec-three-comment-two {
-    bottom: -3rem;
+    bottom: -1rem;
 }
 
 .sec-three-explanation-h1 {
@@ -298,5 +300,5 @@ sec three
 
 
 .okok {
-    max-height: 100vh;
+    height: 100vh;
 }
