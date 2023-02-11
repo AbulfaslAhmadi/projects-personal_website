@@ -1,0 +1,453 @@
+/* 
+
+************************************
+Import fonts
+************************************
+
+*/
+
+
+@font-face {
+    font-family: "Elgoc";
+    src: url("fonts/ElgocAlt-Medium.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "Beatrice";
+    src: url("fonts/Beatrice-Medium.woff2") format("truetype");
+}
+
+
+
+/* 
+
+************************************
+declaration as root
+************************************
+
+*/
+
+
+:root {
+    --background-clr: #0b0b0d;
+
+    --f-clr: #cec9c9;
+
+    --primary-ff: 'Elgoc', serif;
+    --sec-ff: "Beatrice" , sans-serif;
+}
+
+
+
+/* 
+
+************************************
+all
+************************************
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    cursor: none;
+}
+
+
+
+/* 
+
+************************************
+fade in
+************************************
+
+*/
+
+.header-nav-menu p, .sec-one-hero-h1, .sec-one-intoduction-box {
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 2s; /* Firefox < 16 */
+    -ms-animation: fadein 2s; /* Internet Explorer */
+    -o-animation: fadein 2s; /* Opera < 12.1 */
+    animation: fadein 2s;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+
+/* 
+
+************************************
+body
+************************************
+
+*/
+
+
+body {
+    background: var(--background-clr);
+    width: 100%;
+}
+
+
+
+/* 
+
+************************************
+header/navbar
+************************************
+
+*/
+
+
+.header-nav {
+    position: fixed;
+    z-index: 9999;
+    width: 100vw;
+    min-height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    -webkit-backdrop-filter: blur(5px);
+    -moz-backdrop-filter: blur(5px);
+    -ms-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+}
+
+.header-nav-menu {
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.header-nav-p {
+    font-family: var(--sec-ff);
+    color: var(--f-clr);
+    width: fit-content;
+    line-height: 1rem;
+}
+
+.header-nav-p-right {
+    text-align: right;
+}
+
+
+
+/* 
+
+************************************
+go up btn
+************************************
+
+*/
+
+
+.go-up-btn {
+    position: fixed;
+    z-index: 999;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0px solid;
+    border-radius: 20px;
+    bottom: 2rem;
+    right: 2rem;
+    background: var(--f-clr);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    display: none;
+    opacity: 0;
+    transition: all 1000ms ease-in-out;
+}
+
+.go-up-btn-active {
+    display: flex;
+    opacity: 1;
+}
+
+
+
+/* 
+
+************************************
+sec one
+************************************
+
+*/
+
+
+.sec-one {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+
+.sec-one-intoduction {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+}
+
+.sec-one-intoduction-box {
+    position: absolute;
+    z-index: -10;
+    color: var(--background-clr);
+    font-family: var(--sec-ff);
+    background: var(--f-clr);
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    border-radius: 40px;
+}
+
+.sec-one-intoduction-box-one {
+    top: -6rem;
+    left: -5rem;
+    transform: rotate(5deg);
+}   
+
+.sec-one-intoduction-box-two {
+    right: -6rem;
+    top: -5rem;
+    transform: rotate(20deg);
+}
+
+.sec-one-intoduction-box-three {
+    bottom: 7rem;
+    right: -8rem;
+    transform: rotate(10deg);
+}
+
+.sec-one-intoduction-box-four {
+    left: -8rem;
+    bottom: 7rem;
+    transform: rotate(-30deg);
+}
+
+.sec-one-hero-h1 {
+    font-family: var(--primary-ff);
+    font-size: 7rem;
+    width: fit-content;
+    transition: all ease-out 300ms;
+    color: var(--f-clr);
+    font-weight: 600;
+}
+
+@media screen and (max-height: 1000px) {
+    .sec-one {
+        height: 150vh;
+    }
+}
+
+
+
+/* 
+
+************************************
+sec two
+************************************
+
+*/
+
+
+.sec-two {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    position: relative;
+    z-index: -2;
+}
+
+.sec-two-intoduction {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+}
+
+.sec-two-intoduction-h1 {
+    font-family: var(--primary-ff);
+    color: var(--f-clr);
+    font-size: 10rem;
+}
+
+.sec-two-intoduction-p {
+    color: var(--f-clr);
+    font-family: var(--sec-ff);
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1020px) {
+    .sec-two-intoduction {
+        width: 90%;
+    }
+    .sec-two-intoduction-h1 {
+        font-size: 6rem;
+    }
+
+    .sec-two-intoduction-p {
+        font-size: 1.3rem;
+    }
+
+
+}
+
+
+
+/* 
+
+************************************
+sec three
+************************************
+
+*/
+
+
+.sec-three {
+    height: 160vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+    position: relative;
+    z-index: 100;
+}
+
+.sec-three-explanation {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    gap: 8rem;
+}
+
+.sec-three-explanation-div {
+    position: relative;
+}
+
+.sec-three-explanation-comment {
+    background: linear-gradient(180deg, rgb(30, 107, 189) 0%, rgb(122, 152, 184) 500%);
+    white-space: nowrap;
+    padding: 1rem 2rem;
+    font-family: var(--sec-ff);
+    font-size: 0.8rem;
+    color: var(--f-clr);
+    border-radius: 40px;
+
+    position: absolute;
+}
+
+.sec-three-comment-one {
+    top: 3rem;
+    right: 50%;
+}
+
+.sec-three-comment-two {
+    bottom: -1rem;
+    left: 50%;
+}
+
+.sec-three-explanation-h1 {
+    font-family: var(--primary-ff);
+    color: var(--f-clr);
+    font-size: 8rem;
+    text-align: center;
+}   
+
+.sec-three-explanation-p {
+    font-family: var(--sec-ff);
+    color: var(--f-clr);
+    font-size: 1.5rem;
+}
+
+@media screen and (max-width: 1020px) {
+    .sec-three-explanation {
+        width: 90%;
+    }
+    
+    .sec-three-explanation-p  {
+        font-size: 1.3rem;
+    }
+}
+
+
+
+
+/* 
+
+************************************
+sec three
+************************************
+
+*/
+
+
+.footer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.footer-nav {
+    width: 60rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+.footer-nav-h1 {
+    font-family: var(--sec-ff);
+    font-size: 1.5rem;
+    color: var(--f-clr);
+}
+
+.footer-nav-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.footer-nav-menu-links {
+    text-decoration: none;
+    font-family: var(--primary-ff);
+    font-size: 6rem;
+    color: var(--f-clr);
+}
+
+.footer-nav-menu-links::after {
+    content: url(images/external-link.svg);
+}

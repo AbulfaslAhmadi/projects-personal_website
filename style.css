@@ -1,0 +1,156 @@
+/* 
+
+************************************
+Import fonts
+************************************
+
+*/
+
+
+@font-face {
+    font-family: "Elgoc";
+    src: url("fonts/ElgocAlt-Medium.woff2") format("truetype");
+}
+
+@font-face {
+    font-family: "Beatrice";
+    src: url("fonts/Beatrice-Medium.woff2") format("truetype");
+}
+
+
+
+/* 
+
+************************************
+declaration as root
+************************************
+
+*/
+
+
+:root {
+    --background-clr: #0b0b0d;
+
+    --f-clr: #cec9c9;
+
+    --primary-ff: 'Elgoc', serif;
+    --sec-ff: "Beatrice" , sans-serif;
+}
+
+
+
+/* 
+
+************************************
+all
+************************************
+
+*/
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+    /* outline: 1px solid rebeccapurple; */
+}
+
+
+
+/* 
+
+************************************
+body
+************************************
+
+*/
+
+
+
+body {
+    background: var(--background-clr);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+/* 
+
+************************************
+main-div
+************************************
+
+*/
+
+
+.div-one {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    position: relative;
+}
+
+.div-two {
+    display: flex;
+    align-items: end;
+    gap: 3rem;
+    margin: 0 15vw 0;
+}
+
+h1 {
+    color: var(--f-clr);
+    font-family: var(--primary-ff);
+    font-size: 15rem;
+}
+
+p {
+    color: var(--f-clr);
+    font-family: var(--sec-ff);
+    font-size: 1.5rem;
+    margin: 0 0 2rem;
+}
+
+hr {
+    border: 1px solid var(--f-clr);
+}
+
+.fade {
+    transition: all ease-in-out 500ms;
+}
+
+.out {
+    opacity: 0;
+}
+
+@media screen and (max-width: 1020px) {
+    h1 {
+        font-size: 8rem;
+    }
+
+    p {
+        font-size: 1.3rem;
+        margin: 0 0 0;
+    }
+
+    .div-two {
+        flex-direction: column;
+        gap: 0rem;
+        align-items: flex-start;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 6rem;
+    }
+
+    .div-two {
+        margin: 0 10vw 0;
+    }
+}
