@@ -2,17 +2,24 @@ document.addEventListener("scroll", () => {
     const scroll = window.scrollY;
 
 
-    /* hero title */
-    const titleScroll = scroll / 1.4;
+    const secOneHeroH1 = document.querySelectorAll(".sec-one-hero-h1");
+    const SecOneBox = document.querySelectorAll(".sec-one-intoduction-box")
 
-    const SecOneLeft = document.querySelectorAll(".sec-one-left");
-    const SecOneRight = document.querySelectorAll(".sec-one-right");
-    
-    for(i=0; i<SecOneRight.length; i++) {
-        if(scroll < 500) {
-            SecOneRight[i].style.transform = `translate(${titleScroll}px)`;
-            SecOneLeft[i].style.transform = `translate(${-titleScroll}px)`;
+    const secOneBoxOne = document.querySelector(".sec-one-intoduction-box-one");
+    const secOneBoxTwo = document.querySelector(".sec-one-intoduction-box-two");
+    const secOneBoxThree = document.querySelector(".sec-one-intoduction-box-three");
+    const secOneBoxFour = document.querySelector(".sec-one-intoduction-box-four");  
+
+    if(scroll < 500) {
+        for(i=0; i<secOneHeroH1.length; i++) {
+            secOneHeroH1[i].style.opacity = `${1 - (scroll/400)}`;
+            SecOneBox[i].style.opacity = `${1 - (scroll/400)}`;
         }
+
+        secOneBoxOne.style.transform = `translateY(${scroll / -1.4}px) translateX(${scroll / -1.4}px) rotate(${(scroll / -10) + 5}deg)`;
+        secOneBoxTwo.style.transform = `translateY(${scroll / -3}px) translateX(${scroll / 1.4}px) rotate(${(scroll / -3) + 20}deg)`;
+        secOneBoxThree.style.transform = `translateY(${scroll / -2}px) translateX(${scroll / 3}px) rotate(${3 * (scroll / 30) + 10}deg)`;
+        secOneBoxFour.style.transform = `translateY(${scroll / -4}px) translateX(${ -3* scroll / 3}px) rotate(${-3 * (scroll / 30) - 30}deg)`;
     }
 
 
