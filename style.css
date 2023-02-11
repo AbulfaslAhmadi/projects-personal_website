@@ -54,7 +54,7 @@ all
     box-sizing: border-box;
     scroll-behavior: smooth;
 
-    /* outline: 1px solid rebeccapurple; */
+    outline: 1px solid rebeccapurple;
 }
 
 
@@ -71,6 +71,7 @@ body
 
 body {
     background: var(--background-clr);
+    width: 100vw;
 }
 
 
@@ -91,7 +92,7 @@ header/navbar
     min-height: 5rem;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;    
     -webkit-backdrop-filter: blur(5px);
     -moz-backdrop-filter: blur(5px);
     -ms-backdrop-filter: blur(5px);
@@ -171,7 +172,7 @@ sec one
 
 
 .sec-one-intoduction {
-    width: 25rem;
+    width: 15rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -181,10 +182,9 @@ sec one
 
 .sec-one-hero-h1 {
     font-family: var(--primary-ff);
-    font-size: 5rem;
+    font-size: 4rem;
     width: fit-content;
     transition: all ease-out 300ms;
-    font-weight: 100;
     color: var(--f-clr);
     font-weight: 600;
 }
@@ -205,6 +205,8 @@ sec two
     justify-content: center;
     align-items: center;
     height: 70vh;
+    position: relative;
+    z-index: -2;
 }
 
 .sec-two-intoduction {
@@ -225,6 +227,22 @@ sec two
     font-family: var(--sec-ff);
 }
 
+@media screen and (max-width: 350px) {
+    .sec-two {
+        max-height: 200vh;
+    }
+
+    .sec-two-intoduction {
+        max-width: 15rem;
+    }
+}
+
+@media screen and (max-height: 700px) {
+    .sec-two {
+        height: 100vh;
+    }
+}
+
 
 
 /* 
@@ -242,6 +260,8 @@ sec three
     justify-content: center;
     align-items: center;
     overflow-x: hidden;
+    position: relative;
+    z-index: 100;
 }
 
 .sec-three-explanation {
@@ -257,7 +277,6 @@ sec three
 
 .sec-three-explanation-comment {
     background: linear-gradient(180deg, rgb(30, 107, 189) 0%, rgb(122, 152, 184) 500%);
-    display: inline-block;
     white-space: nowrap;
     padding: 1rem 2rem;
     font-family: var(--sec-ff);
@@ -266,7 +285,6 @@ sec three
     border-radius: 40px;
 
     position: absolute;
-    z-index: 999;
 }
 
 .sec-three-comment-one {
@@ -293,7 +311,13 @@ sec three
 
 @media screen and (min-height: 700px) {
     .sec-three {
-        max-height: 100vh;
+        max-height: 120vh;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .sec-three-explanation {
+        max-width: 15rem;
     }
 }
 
@@ -316,7 +340,7 @@ sec three
 }
 
 .footer-nav {
-    width: 20rem;
+    width: 18rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -341,7 +365,7 @@ sec three
 .footer-nav-menu-links {
     text-decoration: none;
     font-family: var(--primary-ff);
-    font-size: 4rem;
+    font-size: 3.5rem;
     color: var(--f-clr);
 }
 
