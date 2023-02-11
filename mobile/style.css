@@ -67,7 +67,7 @@ fade in
 
 */
 
-.header-nav-menu p, .sec-one-hero-h1 {
+.header-nav-menu p, .sec-one-hero-h1, .sec-one-intoduction-box {
     -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
     -moz-animation: fadein 2s; /* Firefox < 16 */
     -ms-animation: fadein 2s; /* Internet Explorer */
@@ -219,6 +219,41 @@ sec one
     align-items: center;
     gap: 1rem;
     position: relative;
+}
+
+.sec-one-intoduction-box {
+    position: absolute;
+    z-index: -10;
+    color: var(--background-clr);
+    font-family: var(--sec-ff);
+    background: var(--f-clr);
+    padding: 0.5rem 1rem;
+    font-size: 0.6rem;
+    border-radius: 40px;
+}
+
+.sec-one-intoduction-box-one {
+    top: -3rem;
+    left: -2rem;
+    transform: rotate(5deg);
+}   
+
+.sec-one-intoduction-box-two {
+    right: -3rem;
+    top: -2.5rem;
+    transform: rotate(20deg);
+}
+
+.sec-one-intoduction-box-three {
+    bottom: 5rem;
+    right: -2rem;
+    transform: rotate(10deg);
+}
+
+.sec-one-intoduction-box-four {
+    left: -2rem;
+    bottom: 6rem;
+    transform: rotate(-30deg);
 }
 
 .sec-one-hero-h1 {
