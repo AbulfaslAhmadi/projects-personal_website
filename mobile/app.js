@@ -51,7 +51,7 @@ document.addEventListener("scroll", () => {
 
     const commentsScroll = (scroll - 1200) / 1.4;
 
-    if(commentsScroll > -300 && commentsScroll < 400) {
+    if(commentsScroll > -500 && commentsScroll < 400) {
         commentOne.style.transform = `translate(${commentsScroll}px) rotate(${-20 + (commentsScroll / 4)}deg)`;
         commentTwo.style.transform = `translate(${-commentsScroll}px) rotate(${10 + (commentsScroll / 4)}deg)`;
     }
