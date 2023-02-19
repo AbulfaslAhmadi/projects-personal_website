@@ -16,7 +16,7 @@ for (let i = 0; i <= 100; i++) {
 
         setTimeout(function() {
             if(counter === 100) {
-                if (screen.width <= 425) {
+                if (screen.width <= 750) {
                     document.location = "mobile/index.html";
                 } else {
                     document.location = "desktop/index.html";
