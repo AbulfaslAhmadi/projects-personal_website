@@ -63,3 +63,11 @@ function goUp() {
     document.body.scrollTop = 0; // For Safari
     document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }
+
+
+/* checking width and redirecting */
+window.addEventListener("resize", () => {
+    if(window.screen.width > 750) {
+        document.location = "/index.html";
+    }
+})
